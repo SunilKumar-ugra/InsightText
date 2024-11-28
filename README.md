@@ -3,7 +3,7 @@
 Clone the repository
 
 ```bash
-https://github.com/SunilKumar-ugra/BBC_News_Classification_LSTM.git
+https://github.com/SunilKumar-ugra/InsightText.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
