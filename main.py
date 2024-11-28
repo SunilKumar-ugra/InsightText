@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 import asyncio
 from transformers import pipeline
 import random
-from main.logger import logger  # Ensure logger.py is correctly configured
+from logger import logger  # Ensure logger.py is correctly configured
 import ray
 from ray import serve
 from ray.serve.handle import DeploymentHandle 
