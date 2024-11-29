@@ -32,7 +32,7 @@ applications:
 
   import_path: main:endpoint_app
 
-  runtime_env: {transformers ,ray[serve], fastapi, torch}
+  runtime_env: {"transformers" ,"ray[serve]", "fastapi", "torch"}
 
   deployments:
 

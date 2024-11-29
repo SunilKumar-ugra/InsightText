@@ -1,5 +1,5 @@
 # File name: Dockerfile
-FROM rayproject/ray:2.9.0
+FROM rayproject/ray:2.39.0
 
 # Set the working dir for the container to /serve_app
 WORKDIR /serve_app
