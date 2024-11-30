@@ -19,8 +19,8 @@ ray.init(ignore_reinit_error=True,log_to_driver=True)
 logger.info("Starting FastAPI app")
 
 
-@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 2, "num_gpus": 0.25})
-#@serve.deployment
+#@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 2, "num_gpus": 0.25})
+@serve.deployment
 # Classes for the ML pipeline
 class BARTsummarizer:
     def __init__(self):
@@ -41,8 +41,8 @@ class BARTsummarizer:
             logger.error(f"Error during summarization: {e}")
             raise
 
-@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 1, "num_gpus": 25})
-#@serve.deployment
+#@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 1, "num_gpus": 25})
+@serve.deployment
 class SentimentAnalyzer:
     def __init__(self):
         self.roberta = pipeline("sentiment-analysis", model="roberta-base",device=device)
@@ -70,8 +70,8 @@ class SentimentAnalyzer:
             logger.error(f"Error during sentiment analysis: {e}")
             raise
 
-@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 1, "num_gpus": 0.25})
-#@serve.deployment
+#@serve.deployment(num_replicas=1, ray_actor_options={"num_cpus": 1, "num_gpus": 0.25})
+@serve.deployment
 class LLMResponder:
     def __init__(self):
         self.model = pipeline("text-generation", model="gpt2",device=device)

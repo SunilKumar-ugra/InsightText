@@ -15,27 +15,7 @@ spec:
         route_prefix: /
         runtime_env:
           working_dir: "https://github.com/SunilKumar-ugra/InsightText/archive/refs/heads/master.zip"
-          pip:
-            - torch
-            - transformers
-        deployments:
-          - name: BARTsummarizer
-            num_replicas: 1
-            ray_actor_options:
-              num_cpus: 1
-              num_gpus: 0.25
-          - name: SentimentAnalyzer
-            num_replicas: 1
-            ray_actor_options:
-              num_cpus: 1
-              num_gpus: 0.25
-          - name: LLMResponder
-            num_replicas: 1
-            ray_actor_options:
-              num_cpus: 1
-              num_gpus: 0.25
-
-          - name: endpoint
+  
             
   rayClusterConfig:
     rayVersion: '2.9.0' # should match the Ray version in the image of the containers
