@@ -18,7 +18,7 @@ spec:
           pip:
             - torch
             - transformers
-  
+        
             
   rayClusterConfig:
     rayVersion: '2.9.0' # should match the Ray version in the image of the containers
@@ -38,8 +38,8 @@ spec:
               image: rayproject/ray:2.9.0
               resources:
                 limits:
-                  cpu: 2
-                  memory: 2Gi
+                  cpu: 3
+                  memory: '2Gi'
                 requests:
                   cpu: 2
                   memory: 2Gi
