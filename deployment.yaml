@@ -23,17 +23,17 @@ spec:
             num_replicas: 1
             ray_actor_options:
               num_cpus: 2.0
-              num_gpus: 0.2
+              num_gpus: 0
           - name: SentimentAnalyzer
             num_replicas: 1
             ray_actor_options:
               num_cpus: 2.0
-              num_gpus: 0.2
+              num_gpus: 0
           - name: LLMResponder
             num_replicas: 1
             ray_actor_options:
               num_cpus: 2.0
-              num_gpus: 0.2
+              num_gpus: 0
 
           - name: endpoint
             
