@@ -15,6 +15,9 @@ spec:
         route_prefix: /
         runtime_env:
           working_dir: "https://github.com/SunilKumar-ugra/InsightText/archive/refs/heads/master.zip"
+          pip:
+            - torch
+            - transformers
   
             
   rayClusterConfig:
